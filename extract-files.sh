@@ -1,7 +1,7 @@
 #!/bin/sh
 
 VENDOR=asus
-DEVICE=A68
+DEVICE=A66
 
 BASE=../../../vendor/$VENDOR/$DEVICE/proprietary
 rm -rf $BASE/*
