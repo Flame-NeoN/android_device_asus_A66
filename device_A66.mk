@@ -52,12 +52,12 @@ PRODUCT_PACKAGES += \
         VisualizationWallpapers \
         librs_jni
 
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
 	device/asus/A66/WCNSS_cfg.dat:system/vendor/firmware/wlan/prima/WCNSS_cfg.dat \
 	device/asus/A66/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
 	device/asus/A66/WCNSS_qcom_wlan_nv.bin:system/etc/wifi/WCNSS_qcom_wlan_nv.bin
 
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
 	device/asus/A66/snd_soc_msm_2x_Fusion3:system/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3 \
 	device/asus/A66/audio_policy.conf:system/etc/audio_policy.conf
 
@@ -66,14 +66,12 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
 	device/asus/A66/init.asus.rc:root/init.asus.rc \
-	device/asus/A66/init.asus.thermald.rc:root/init.asus.thermald.rc \
 	device/asus/A66/init.asus.usb.rc:root/init.asus.usb.rc \
 	device/asus/A66/init.goldfish.rc:root/init.goldfish.rc \
 	device/asus/A66/init.qcom.class_core.sh:root/init.qcom.class_core.sh \
 	device/asus/A66/init.qcom.class_main.sh:root/init.qcom.class_main.sh \
 	device/asus/A66/init.qcom.rc:root/init.qcom.rc \
 	device/asus/A66/init.qcom.sh:root/init.qcom.sh \
-	device/asus/A66/init.qcom.usb.rc:root/init.qcom.usb.rc \
 	device/asus/A66/init.qcom.usb.sh:root/init.qcom.usb.sh \
 	device/asus/A66/init.rc:root/init.rc \
 	device/asus/A66/init.target.rc:root/init.target.rc \
@@ -85,11 +83,11 @@ PRODUCT_COPY_FILES += \
 	device/asus/A66/ueventd.goldfish.rc:root/ueventd.goldfish.rc \
 	device/asus/A66/media_profiles.xml:system/etc/media_profiles.xml \
 	device/asus/A66/media_codecs.xml:system/etc/media_codecs.xml
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
 	device/asus/A66/kickstart_checker.sh:system/etc/kickstart_checker.sh
 
 # Prebuilt kl and kcm keymaps
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
 	device/asus/A66/apq8064-tabla-snd-card_Button_Jack.kl:system/usr/keylayout/apq8064-tabla-snd-card_Button_Jack.kl \
 	device/asus/A66/hs_detect.kl:system/usr/keylayout/hs_detect.kl \
 	device/asus/A66/pmic8xxx_pwrkey.kl:system/usr/keylayout/pmic8xxx_pwrkey.kl \
@@ -100,7 +98,7 @@ PRODUCT_COPY_FILES += \
 	device/asus/A66/pmic8xxx_pwrkey.kcm:system/usr/keychars/pmic8xxx_pwrkey.kcm
 
 # Prebuilt input device calibration files
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
 	device/asus/A66/touch_dev.idc:system/usr/idc/touch_dev.idc
 
 # These are the hardware-specific features
@@ -207,7 +205,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	power.msm8960
 
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
 	device/asus/A66/init.A66.bt.sh:system/etc/init.A66.bt.sh
 
 PRODUCT_PROPERTY_OVERRIDES += \

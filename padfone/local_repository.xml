@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <project name="rafatzbr/android_device_asus_padfone" path="device/asus/padfone" remote="github" revision="master" />
+  <project name="rafatzbr/android_kernel_asus_padfone" path="kernel/asus/padfone" remote="github" revision="master" />
+</manifest>
