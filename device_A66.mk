@@ -61,7 +61,7 @@ PRODUCT_PACKAGES += \
 	device/asus/A66/snd_soc_msm_2x_Fusion3:system/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3 \
 	device/asus/A66/audio_policy.conf:system/etc/audio_policy.conf
 
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
 	device/asus/A66/thermald-A66.conf:system/etc/thermald.conf
 
 PRODUCT_COPY_FILES += \
@@ -102,7 +102,7 @@ PRODUCT_COPY_FILES += \
 	device/asus/A66/touch_dev.idc:system/usr/idc/touch_dev.idc
 
 # These are the hardware-specific features
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
 	frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
 	frameworks/native/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml \
@@ -140,7 +140,7 @@ else
 endif
 
 # NFC access control + feature files + configuration
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
     $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml \
     frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
     frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
@@ -219,7 +219,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
 	mm-vdec-omx-test \
-	mm-venc-omx-test720p \
+	mm-venc-omx-test720 \
 	libdivxdrmdecrypt \
 	libOmxVdec \
 	libOmxVenc \
