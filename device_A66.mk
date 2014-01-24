@@ -264,10 +264,10 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	persist.sys.usb.config=mtp
 
 # for bugmailer
-PRODUCT_PACKAGES += send_bug
-PRODUCT_COPY_FILES += \
-	system/extras/bugmailer/bugmailer.sh:system/bin/bugmailer.sh \
-	system/extras/bugmailer/send_bug:system/bin/send_bug
+#PRODUCT_PACKAGES += send_bug
+#PRODUCT_COPY_FILES += \
+#	system/extras/bugmailer/bugmailer.sh:system/bin/bugmailer.sh \
+#	system/extras/bugmailer/send_bug:system/bin/send_bug
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
