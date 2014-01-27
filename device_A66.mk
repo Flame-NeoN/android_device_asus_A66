@@ -65,7 +65,9 @@ PRODUCT_PACKAGES += \
 	device/asus/A66/thermald-A66.conf:system/etc/thermald.conf
 
 PRODUCT_COPY_FILES += \
+	device/asus/A66/init:root/init \
 	device/asus/A66/init.asus.rc:root/init.asus.rc \
+	device/asus/A66/init.asus.sdcard.sh:root/init.asus.sdcard.sh \
 	device/asus/A66/init.asus.usb.rc:root/init.asus.usb.rc \
 	device/asus/A66/init.goldfish.rc:root/init.goldfish.rc \
 	device/asus/A66/init.qcom.class_core.sh:root/init.qcom.class_core.sh \
@@ -83,9 +85,6 @@ PRODUCT_COPY_FILES += \
 	device/asus/A66/ueventd.goldfish.rc:root/ueventd.goldfish.rc \
 	device/asus/A66/media_profiles.xml:system/etc/media_profiles.xml \
 	device/asus/A66/media_codecs.xml:system/etc/media_codecs.xml
-#PRODUCT_COPY_FILES += \
-	device/asus/A66/kickstart_checker.sh:system/etc/kickstart_checker.sh
-
 # Prebuilt kl and kcm keymaps
 #PRODUCT_COPY_FILES += \
 	device/asus/A66/apq8064-tabla-snd-card_Button_Jack.kl:system/usr/keylayout/apq8064-tabla-snd-card_Button_Jack.kl \
