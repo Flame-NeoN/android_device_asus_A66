@@ -32,17 +32,18 @@ TARGET_KRAIT_BIONIC_BBTHRESH := 64
 TARGET_KRAIT_BIONIC_PLDSIZE := 64
 
 # Kernel Settings
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 UNLOCKED=Y SB=Y CPU_RV=407940e1 eMMC=HYNIX,16G,31047680 SBL_INFO=2.0.8-user ABOOT_INFO=10791J-00-user HW_ID=A66_ER3 AUDIO_DBG=N androidboot.emmc=true androidboot.serialno=205fda androidboot.baseband=msm
 BOARD_KERNEL_BASE := 0x80200000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000
-TARGET_PREBUILT_KERNEL := device/asus/A66/kernel
+TARGET_PREBUILT_KERNEL := device/asus/A66/kernel	
+
 # MSM files in asus kernel sources are too old :(
 #TARGET_KERNEL_SOURCE := kernel/asus/A66
 #TARGET_KERNEL_CONFIG := cm_A66_defconfig
 #TARGET_KERNEL_CONFIG := msm8960-userdebug_defconfig
 
-# Apparently these are the correct values.
+# Apparently these are the correct values - Checked twice!
 BOARD_BOOTIMAGE_PARTITION_SIZE := 10485760 # 10MB
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 10485760 # 10MB
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1073741824 # 1073MB
@@ -102,7 +103,7 @@ BOARD_USES_EXTRA_THERMAL_SENSOR := true
 BOARD_USES_CAMERA_FAST_AUTOFOCUS := true
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
-$(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
+$(shell mkdir -p out/target/product/A66/obj/KERNEL_OBJ/usr)
 
 #TARGET_RELEASETOOLS_EXTENSIONS := device/asus/A66
 #BOARD_LIB_DUMPSTATE := libdumpstate.A66

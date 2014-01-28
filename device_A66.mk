@@ -76,6 +76,7 @@ PRODUCT_COPY_FILES += \
 	device/asus/A66/init.qcom.sh:root/init.qcom.sh \
 	device/asus/A66/init.qcom.usb.sh:root/init.qcom.usb.sh \
 	device/asus/A66/init.rc:root/init.rc \
+	device/asus/A66/init.recovery.qcom.rc:root/init.recovery.qcom.rc \
 	device/asus/A66/init.target.rc:root/init.target.rc \
 	device/asus/A66/init.trace.rc:root/init.trace.rc \
 	device/asus/A66/init.usb.rc:root/init.usb.rc \
