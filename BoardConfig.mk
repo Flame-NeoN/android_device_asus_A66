@@ -36,7 +36,7 @@ BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom user
 BOARD_KERNEL_BASE := 0x80200000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000
-TARGET_PREBUILT_KERNEL := device/asus/A66/kernel	
+TARGET_PREBUILT_KERNEL := device/asus/A66/zImage	
 
 # MSM files in asus kernel sources are too old :(
 #TARGET_KERNEL_SOURCE := kernel/asus/A66

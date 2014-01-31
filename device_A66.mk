@@ -22,14 +22,14 @@
 DEVICE_PACKAGE_OVERLAYS += device/asus/A66/overlay
 
 LOCAL_PATH := device/asus/A66
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
-else
-	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
+#ifeq ($(TARGET_PREBUILT_KERNEL),)
+#	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
+#else
+#	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+#endif
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_KERNEL):kernel
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_KERNEL):kernel
 
 # This device is xhdpi.  However the platform doesn't
 # currently contain all of the bitmaps at xhdpi density so
@@ -38,12 +38,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
-PRODUCT_PACKAGES := \
-	lights.A66
+#PRODUCT_PACKAGES := \
+#	lights.A66
 
-PRODUCT_PACKAGES += \
-    charger_res_images \
-    charger
+#PRODUCT_PACKAGES += \
+#    charger_res_images \
+#    charger
 
 # Live Wallpapers
 PRODUCT_PACKAGES += \
@@ -263,6 +263,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	persist.sys.usb.config=mtp
 
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.sf.lcd_density = 240
+
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.adb.secure=0 \
+	service.adb.enable=1 \
+	persist.service.adb.enable=1
+
 # for bugmailer
 #PRODUCT_PACKAGES += send_bug
 #PRODUCT_COPY_FILES += \
@@ -272,4 +280,8 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
 # This is the A66-specific audio package
-$(call inherit-product, frameworks/base/data/sounds/AudioPackage10.mk)
+#$(call inherit-product, frameworks/base/data/sounds/AudioPackage10.mk)
+
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
+PRODUCT_NAME := full_A66
+PRODUCT_DEVICE := A66
